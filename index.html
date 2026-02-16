@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Health Insurance Guide for New Permanent Residents in California</title>
+<title>Health Insurance Guide for New Permanent Residents (CA &amp; WA)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -366,6 +366,18 @@ a::after{content:" (" attr(href) ")";font-size:9pt;color:#666}
 footer{background:#333!important}
 }
 
+/* ---- Comparison table ---- */
+.cmp-table{width:100%;border-collapse:separate;border-spacing:0;font-size:14.5px;margin:20px 0}
+.cmp-table th,.cmp-table td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--cream-dark)}
+.cmp-table thead th{background:var(--teal-deep);color:#fff;font-size:13px;text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+.cmp-table thead th:first-child{border-radius:var(--radius) 0 0 0}
+.cmp-table thead th:last-child{border-radius:0 var(--radius) 0 0}
+.cmp-table tbody tr:last-child td{border-bottom:none}
+.cmp-table tbody tr:nth-child(even){background:rgba(42,157,143,.04)}
+.cmp-table .win{background:var(--green-light);font-weight:700}
+.cmp-table .lose{background:var(--red-light)}
+.cmp-table .tie{background:var(--amber-light)}
+
 /* ---- Animate on scroll ---- */
 .fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
 .fade-up.visible{opacity:1;transform:translateY(0)}
@@ -379,9 +391,9 @@ footer{background:#333!important}
 <!-- Hero -->
 <header class="hero" id="top">
 <div class="hero-inner">
-<h1>Health Insurance Guide<span>For new permanent residents in California (age 65+, no income)</span>
+<h1>Health Insurance Guide<span>For new permanent residents in California &amp; Washington (age 65+, no income)</span>
 </h1>
-<div class="date">Updated February 15, 2026</div>
+<div class="date">Updated February 16, 2026</div>
 </div>
 <div class="motif" aria-hidden="true"></div>
 </header>
@@ -392,10 +404,12 @@ footer{background:#333!important}
 <nav class="toc" aria-label="Table of contents">
 <div class="inner">
 <span class="nav-title">Guide</span>
+<a href="#alert">Federal Alert</a>
 <a href="#glance">At a Glance</a>
-<a href="#covered-ca">Covered California</a>
+<a href="#compare">CA vs WA</a>
+<a href="#covered-ca">ACA Marketplace</a>
 <a href="#medicare">Medicare</a>
-<a href="#medi-cal">Medi-Cal</a>
+<a href="#medi-cal">Medicaid</a>
 <a href="#emergency">Emergency</a>
 <a href="#sponsor">Sponsor Rules</a>
 <a href="#plan">Action Plan</a>
@@ -406,34 +420,98 @@ footer{background:#333!important}
 
 <main>
 
+<!-- ============ FEDERAL ALERT ============ -->
+<section id="alert">
+<div class="container">
+<div class="content-card fade-up" style="border:2px solid var(--red);border-left:6px solid var(--red);background:var(--red-light)">
+<h2 style="color:var(--red);font-size:1.3rem;margin-bottom:12px">Critical Federal Law Change (January 2026)</h2>
+<p>The <strong>&ldquo;One Big Beautiful Bill Act&rdquo;</strong> (OBBBA), signed into law in summer 2025, <strong>eliminated ACA marketplace subsidies</strong> for lawfully present immigrants with income below 100% of the federal poverty level ($15,650/year) who are ineligible for Medicaid.</p>
+<p>Previously (2014&ndash;2025), this group could receive premium tax credits that made marketplace coverage nearly free. <strong>That exception no longer exists as of January 1, 2026.</strong></p>
+<p>Without subsidies, an unsubsidized marketplace silver plan for a 65-year-old costs approximately <strong>$1,300&ndash;$1,450/month</strong>. State-level subsidy programs may help&mdash;see details below.</p>
+<p style="margin-bottom:0"><strong>Key question to ask Covered California or Washington Healthplanfinder:</strong> &ldquo;Does the state premium subsidy program cover a lawful permanent resident with zero income who lost federal ACA subsidies under the OBBBA?&rdquo;</p>
+</div>
+</div>
+</section>
+
 <!-- ============ AT A GLANCE ============ -->
 <section id="glance">
 <div class="container">
 <div class="section-label">Overview</div>
 <h2>At a Glance</h2>
-<p>Here's a quick look at which programs are available right now and which require waiting.</p>
+<p>Here's a quick look at which programs are available right now and which require waiting. This applies to <strong>both California and Washington</strong> unless noted.</p>
 
 <div class="glance-grid">
-<div class="glance-card best fade-up">
-<span class="badge">Best option</span>
-<div class="card-title">Covered California</div>
-<p>Eligible <strong>immediately</strong> as a permanent resident. Subsidies available even with zero income. Apply now.</p>
+<div class="glance-card caution fade-up">
+<span class="badge">Verify subsidies</span>
+<div class="card-title">ACA Marketplace</div>
+<p>Eligible to <strong>enroll</strong>, but federal subsidies lost for below-FPL immigrants (OBBBA). State subsidies may help&mdash;<strong>call to confirm.</strong></p>
 </div>
 <div class="glance-card caution fade-up">
 <span class="badge">Available</span>
-<div class="card-title">Emergency Medi-Cal</div>
-<p>Covers emergency room visits and emergency surgeries. Available as a safety net regardless of status.</p>
+<div class="card-title">Emergency Medicaid</div>
+<p>Covers emergency room visits and surgeries. Available in both CA and WA regardless of immigration status.</p>
 </div>
 <div class="glance-card blocked fade-up">
 <span class="badge">Not eligible yet</span>
 <div class="card-title">Medicare</div>
-<p>Requires 5 years of continuous US residency. Earliest eligibility around <strong>2031</strong>.</p>
+<p>Requires 5 years of continuous US residency. Earliest eligibility around <strong>2031</strong>. Same in both states (federal).</p>
 </div>
 <div class="glance-card blocked fade-up">
-<span class="badge">Enrollment frozen</span>
-<div class="card-title">Full Medi-Cal</div>
-<p>As of Jan 2026, new green card holders under 5 years cannot enroll in full-scope Medi-Cal.</p>
+<span class="badge">Not available</span>
+<div class="card-title">Full Medicaid</div>
+<p><strong>CA:</strong> Enrollment frozen for new LPRs &lt;5yr. <strong>WA:</strong> Federal 5-year bar applies. Neither state provides full coverage now.</p>
 </div>
+<div class="glance-card best fade-up">
+<span class="badge">Best immediate step</span>
+<div class="card-title">Community Health Centers</div>
+<p>FQHCs offer doctor visits, prescriptions, and preventive care on a <strong>sliding-scale fee</strong> regardless of insurance or status.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ CA vs WA COMPARISON ============ -->
+<section id="compare">
+<div class="container">
+<div class="section-label">State Comparison</div>
+<h2>California vs. Washington</h2>
+<p style="color:var(--text-mid);margin-bottom:24px">A side-by-side comparison for a 65-year-old new green card holder with no income.</p>
+
+<div class="content-card fade-up" style="overflow-x:auto">
+<table class="cmp-table">
+<thead><tr><th style="width:28%">Program</th><th style="width:32%">California</th><th style="width:32%">Washington</th><th style="width:8%">Edge</th></tr></thead>
+<tbody>
+<tr><td><strong>Full Medicaid</strong></td><td class="lose">Enrollment <strong>frozen</strong> for new LPRs &lt;5yr (state policy, Jan 2026)</td><td class="lose">Federal 5-year bar applies; Apple Health Expansion <strong>closed</strong> &amp; excludes LPRs in bar</td><td class="tie">Tie</td></tr>
+<tr><td><strong>ACA Federal Subsidies</strong></td><td class="lose">Not available (income &lt;100% FPL, OBBBA)</td><td class="lose">Not available (same federal law)</td><td class="tie">Tie</td></tr>
+<tr><td><strong>State ACA Subsidies</strong></td><td class="tie">$190M state program up to 150&ndash;165% FPL. <strong>Must verify</strong> if covers below-FPL immigrants</td><td class="tie">Cascade Care Savings: <strong>$250/month</strong> per member for those without federal subsidies (&le;250% FPL)</td><td class="tie">?</td></tr>
+<tr><td><strong>Unsubsidized ACA Cost</strong></td><td>~$1,340/mo (65yo silver plan)</td><td>~$1,440/mo; minus $250 Cascade Care = <strong>~$1,190/mo</strong></td><td class="tie">WA?</td></tr>
+<tr><td><strong>Emergency Medicaid</strong></td><td class="win">Emergency Medi-Cal&mdash;available</td><td class="win">Alien Emergency Medical&mdash;available</td><td class="tie">Tie</td></tr>
+<tr><td><strong>Medicare</strong></td><td>Not eligible (5-year wait)</td><td>Not eligible (5-year wait)</td><td class="tie">Tie</td></tr>
+<tr><td><strong>Community Health Centers</strong></td><td class="win">Extensive FQHC network statewide</td><td class="win">Good FQHC network statewide</td><td class="tie">Tie</td></tr>
+<tr><td><strong>2027 Outlook</strong></td><td>OBBBA further restricts immigrant subsidies; CA may pass new state protections</td><td>WA&rsquo;s 1332 waiver (through 2028) allows all residents to purchase marketplace plans regardless of status</td><td class="tie">WA?</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="content-card fade-up">
+<h3>Key Takeaway</h3>
+<div class="highlight-box alert">
+<strong>Neither state is clearly better right now.</strong> The federal OBBBA change in 2026 created a coverage gap in both states for new green card holders with zero income. The critical next step is calling both state marketplaces to ask about state-funded subsidies:<br><br>
+&bull; <strong>Covered California:</strong> <a href="tel:+18003001506">(800) 300-1506</a> &mdash; Ask if the state subsidy covers below-FPL LPRs who lost federal subsidies<br>
+&bull; <strong>WA Healthplanfinder:</strong> <a href="tel:+18559234633">(855) 923-4633</a> &mdash; Ask about Cascade Care Savings for this situation<br><br>
+<strong>If even modest income (~$15,650/year) is possible</strong> through part-time work, federal ACA subsidies become available again in either state, and premiums would drop to under $50/month.
+</div>
+</div>
+
+<div class="content-card fade-up">
+<h3>Washington-Specific Notes</h3>
+<ul>
+<li><strong>Apple Health (WA Medicaid):</strong> The standard federal 5-year bar applies. Unlike California (which previously waived it), Washington has always required the 5-year wait for LPRs.</li>
+<li><strong>Apple Health Expansion:</strong> A state-funded Medicaid-like program launched July 2024 but <strong>enrollment is closed</strong> (capped at ~13,000). It also does <em>not</em> cover LPRs in the 5-year bar.</li>
+<li><strong>Cascade Care Savings:</strong> State-funded subsidy of <strong>$250/month</strong> per member for those ineligible for federal subsidies with income &le;250% FPL. This is a known, available benefit.</li>
+<li><strong>1332 Waiver:</strong> Through 2028, Washington allows <em>all</em> residents to purchase marketplace plans regardless of immigration status. This may provide better long-term protection than California.</li>
+<li><strong>Alien Emergency Medical:</strong> WA&rsquo;s equivalent of Emergency Medi-Cal. Covers emergency conditions.</li>
+</ul>
 </div>
 </div>
 </section>
@@ -441,18 +519,31 @@ footer{background:#333!important}
 <!-- ============ COVERED CALIFORNIA ============ -->
 <section id="covered-ca">
 <div class="container">
-<div class="section-label">Recommended</div>
-<h2>Covered California (ACA Marketplace)</h2>
-<p style="font-size:1.05rem;color:var(--text-mid);margin-bottom:24px">This is the best and most immediate path to comprehensive health insurance.</p>
+<div class="section-label">Marketplace Coverage</div>
+<h2>ACA Marketplace (Covered California / WA Healthplanfinder)</h2>
+<p style="font-size:1.05rem;color:var(--text-mid);margin-bottom:24px">The marketplace is still the primary path to comprehensive coverage, but affordability depends on subsidies.</p>
 
 <div class="content-card fade-up">
-<h3>Why She Qualifies</h3>
+<h3>Eligibility</h3>
 <ul>
-<li>As a <strong>lawful permanent resident</strong> (green card holder), she is eligible with <strong>no waiting period</strong>.</li>
-<li><strong>Special rule for immigrants:</strong> During the first 5 years, lawfully present immigrants with income below the federal poverty level can still receive premium subsidies. Normally, people this low-income are directed to Medicaid instead&mdash;but immigrants in the 5-year bar get an exception.</li>
-<li>With <strong>zero income</strong>, she qualifies for significant <strong>premium tax credits</strong> and <strong>cost-sharing reductions</strong> on Silver plans, making coverage very affordable or even free.</li>
-<li><strong>Sponsor deeming does not apply.</strong> Unlike means-tested programs (Medi-Cal, SNAP), ACA marketplace subsidies do <em>not</em> count the sponsor&rsquo;s income. Only the applicant&rsquo;s own income matters. See the <a href="#sponsor">Sponsor Rules</a> section for details.</li>
+<li>As a <strong>lawful permanent resident</strong> (green card holder), she is eligible to <strong>enroll</strong> in marketplace plans with <strong>no waiting period</strong> in both CA and WA.</li>
+<li><strong>Sponsor deeming does not apply.</strong> Unlike means-tested programs (Medicaid, SNAP), ACA marketplace subsidies do <em>not</em> count the sponsor&rsquo;s income. Only the applicant&rsquo;s own income matters. See the <a href="#sponsor">Sponsor Rules</a> section.</li>
 </ul>
+</div>
+
+<div class="content-card fade-up">
+<h3>The Subsidy Problem (OBBBA Change)</h3>
+<div class="highlight-box alert">
+<strong>Federal subsidies are no longer available for this situation.</strong> Before 2026, lawfully present immigrants below 100% FPL who were ineligible for Medicaid could receive premium tax credits (often resulting in $0 premiums). The &ldquo;One Big Beautiful Bill Act&rdquo; eliminated this exception effective January 1, 2026.
+</div>
+<ul>
+<li>With <strong>zero income</strong> (below 100% FPL of $15,650/year), she <strong>cannot</strong> receive federal premium tax credits.</li>
+<li>Without subsidies, a silver plan for a 65-year-old costs approximately <strong>$1,300&ndash;$1,450/month</strong> depending on location.</li>
+<li><strong>If income reaches $15,650/year</strong> (100% FPL) through any work, <strong>federal subsidies become available again</strong>&mdash;premiums could drop to <strong>under $50/month</strong> for a silver plan.</li>
+</ul>
+<h3 style="margin-top:20px">State Subsidies That May Help</h3>
+<div class="info-row"><dt>California</dt><dd>$190M state subsidy program for enrollees up to 150&ndash;165% FPL. <strong>Must call (800) 300-1506 to confirm</strong> if this covers below-FPL immigrants who lost federal subsidies.</dd></div>
+<div class="info-row"><dt>Washington</dt><dd><strong>Cascade Care Savings: $250/month</strong> per member for those without federal subsidies (income &le;250% FPL). Available now but may not fully cover premiums.</dd></div>
 </div>
 
 <div class="content-card fade-up">
@@ -469,18 +560,19 @@ footer{background:#333!important}
 </div>
 
 <div class="content-card fade-up">
-<h3>How to Enroll</h3>
+<h3>How to Enroll &mdash; California</h3>
 <div class="info-row"><dt>By Phone</dt><dd><strong>(800) 300-1506</strong> &mdash; Mon&ndash;Fri, 8 am&ndash;6 pm. Help available in many languages including Bengali.</dd></div>
 <div class="info-row"><dt>Online</dt><dd><a href="https://www.coveredca.com/apply/" target="_blank" rel="noopener">CoveredCA.com/apply</a></dd></div>
 <div class="info-row"><dt>In Person</dt><dd><a href="https://www.coveredca.com/support/find-an-enroller/" target="_blank" rel="noopener">Find a certified enroller near you</a> &mdash; free and confidential help.</dd></div>
 <div class="info-row"><dt>Immigrant Info</dt><dd><a href="https://www.coveredca.com/learning-center/information-for-immigrants/" target="_blank" rel="noopener">Covered CA&rsquo;s immigrant resource page</a></dd></div>
-
-<div style="margin-top:24px;text-align:center">
-<a class="cta" href="https://www.coveredca.com/apply/" target="_blank" rel="noopener">
-Apply at Covered California
-<svg viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg>
-</a>
 </div>
+
+<div class="content-card fade-up">
+<h3>How to Enroll &mdash; Washington</h3>
+<div class="info-row"><dt>By Phone</dt><dd><strong>(855) 923-4633</strong> &mdash; Mon&ndash;Fri, 7:30 am&ndash;5:30 pm PT.</dd></div>
+<div class="info-row"><dt>Online</dt><dd><a href="https://www.wahealthplanfinder.org" target="_blank" rel="noopener">WAHealthplanfinder.org</a></dd></div>
+<div class="info-row"><dt>Immigrant Info</dt><dd><a href="https://www.wahbexchange.org/about-the-exchange/initiatives/immigrant-health-expansion/" target="_blank" rel="noopener">WA Health Benefit Exchange &mdash; Immigrant Health Coverage</a></dd></div>
+<div class="info-row"><dt>Free Legal Help</dt><dd>CLEAR Hotline: <strong><a href="tel:+18882011014">(888) 201-1014</a></strong> (immigration benefits counseling)</dd></div>
 </div>
 </div>
 </section>
@@ -525,11 +617,11 @@ Apply at Covered California
 <section id="medi-cal">
 <div class="container">
 <div class="section-label">Important Changes</div>
-<h2>Medi-Cal &mdash; Recent Changes</h2>
-<p style="color:var(--text-mid);margin-bottom:24px">California recently changed the rules, and this directly affects new permanent residents.</p>
+<h2>Medicaid (Medi-Cal / Apple Health)</h2>
+<p style="color:var(--text-mid);margin-bottom:24px">Both states have restrictions that prevent new green card holders from accessing full Medicaid.</p>
 
 <div class="content-card fade-up">
-<h3>What Changed on January 1, 2026</h3>
+<h3>California: What Changed on January 1, 2026</h3>
 <ul>
 <li><strong>Previously</strong>, California had <em>no</em> 5-year waiting period for permanent residents&mdash;full-scope Medi-Cal was available immediately.</li>
 <li><strong>As of January 1, 2026</strong>, California enacted an <strong>enrollment freeze</strong> for new applicants with &ldquo;unsatisfactory immigration status.&rdquo;</li>
@@ -540,6 +632,16 @@ Apply at Covered California
 <div class="highlight-box alert">
 <strong>This is a significant change.</strong> If she had applied before January 1, 2026, she could have received full-scope coverage. Those already enrolled keep their benefits. Only new applicants are affected by the freeze.
 </div>
+</div>
+
+<div class="content-card fade-up">
+<h3>Washington: Apple Health (Medicaid)</h3>
+<ul>
+<li>The standard <strong>federal 5-year bar applies</strong>. Washington has never waived it for LPRs (unlike California, which previously did).</li>
+<li><strong>Apple Health Expansion</strong> (state-funded Medicaid-like program) launched July 2024 but <strong>enrollment is closed</strong> (capped at ~13,000 people). It also <em>does not</em> cover LPRs in the 5-year bar.</li>
+<li><strong>Alien Emergency Medical</strong> is available for emergency conditions, similar to CA&rsquo;s Emergency Medi-Cal.</li>
+<li>After 5 years, the applicant can qualify for full Apple Health. Income limit for seniors: ~$994/month (SSI-related).</li>
+</ul>
 </div>
 
 <div class="content-card fade-up">
@@ -567,8 +669,8 @@ Apply at Covered California
 <section id="emergency">
 <div class="container">
 <div class="section-label">Safety Net</div>
-<h2>Emergency Medi-Cal</h2>
-<p style="color:var(--text-mid);margin-bottom:24px">Available right now as a safety net, regardless of immigration status or waiting periods.</p>
+<h2>Emergency Medicaid (CA &amp; WA)</h2>
+<p style="color:var(--text-mid);margin-bottom:24px">Available right now in both states as a safety net, regardless of immigration status or waiting periods.</p>
 
 <div class="content-card fade-up">
 <h3>What It Covers</h3>
@@ -578,12 +680,17 @@ Apply at Covered California
 <li>Emergency medical conditions (heart attacks, strokes, severe injuries, etc.)</li>
 <li>Labor and delivery</li>
 </ul>
-<p>This does <em>not</em> cover routine doctor visits, prescriptions, or preventive care&mdash;which is why Covered California is the primary recommendation.</p>
+<p>This does <em>not</em> cover routine doctor visits, prescriptions, or preventive care&mdash;which is why marketplace coverage and FQHCs are critical for day-to-day health needs.</p>
 
-<h3 style="margin-top:24px">How to Apply</h3>
+<h3 style="margin-top:24px">How to Apply &mdash; California</h3>
 <div class="info-row"><dt>Online</dt><dd><a href="http://www.benefitscal.com" target="_blank" rel="noopener">BenefitsCal.com</a> &mdash; California&rsquo;s benefits application portal</dd></div>
 <div class="info-row"><dt>In Person</dt><dd>Visit your <a href="http://www.dhcs.ca.gov/services/medi-cal/Pages/CountyOffices.aspx" target="_blank" rel="noopener">local county Medi-Cal office</a></dd></div>
 <div class="info-row"><dt>By Phone</dt><dd>Call Covered California at <strong>(800) 300-1506</strong> for guidance</dd></div>
+
+<h3 style="margin-top:24px">How to Apply &mdash; Washington</h3>
+<div class="info-row"><dt>Online</dt><dd><a href="https://www.wahealthplanfinder.org" target="_blank" rel="noopener">WAHealthplanfinder.org</a> &mdash; apply for Apple Health / Alien Emergency Medical</dd></div>
+<div class="info-row"><dt>By Phone</dt><dd>WA Health Care Authority: <strong><a href="tel:+18005625256">(800) 562-3022</a></strong></dd></div>
+<div class="info-row"><dt>Free Legal Help</dt><dd>CLEAR Hotline: <strong><a href="tel:+18882011014">(888) 201-1014</a></strong> (immigration benefits counseling)</dd></div>
 </div>
 </div>
 </section>
@@ -643,7 +750,7 @@ Apply at Covered California
 <div class="content-card fade-up">
 <h3>Bottom Line</h3>
 <div class="highlight-box">
-<strong>This reinforces Covered California as the best path.</strong> Since ACA marketplace plans are not means-tested, sponsor deeming and reimbursement rules do not apply. The sponsor faces no liability, and the applicant&rsquo;s eligibility is based solely on their own income. For an applicant with zero income, subsidies will be substantial.
+<strong>Sponsor deeming does not affect ACA marketplace plans or Emergency Medicaid.</strong> Since marketplace plans are not means-tested, the sponsor faces no liability for marketplace enrollment, and the applicant&rsquo;s eligibility is based solely on their own income. However, note that with zero income, <strong>federal subsidies are no longer available</strong> (see <a href="#alert">Federal Alert</a>)&mdash;state subsidies and FQHCs are the best paths forward. Means-tested benefits (full-scope Medicaid, SNAP) <em>are</em> affected by deeming and may trigger sponsor reimbursement.
 </div>
 </div>
 </div>
@@ -664,20 +771,25 @@ Apply at Covered California
 <span class="tl-phase-label now">Now &mdash; February 2026</span>
 
 <div class="tl-item">
-<strong>Apply to Covered California immediately.</strong><br>
-Call <strong>(800) 300-1506</strong> or apply online. This is the most important step.
+<strong>Find a Federally Qualified Health Center (FQHC).</strong><br>
+This is the most important first step. FQHCs offer doctor visits, prescriptions, and preventive care on a <strong>sliding-scale fee</strong> regardless of insurance or immigration status.
 </div>
 <div class="tl-item">
-<strong>Apply for Emergency Medi-Cal</strong> through your county office as a safety net for emergencies.
+<strong>Call the ACA marketplace to ask about state subsidies.</strong><br>
+<strong>CA:</strong> Covered California at <a href="tel:+18003001506">(800) 300-1506</a> &mdash; ask if the state subsidy program covers below-FPL LPRs who lost federal subsidies under OBBBA.<br>
+<strong>WA:</strong> Healthplanfinder at <a href="tel:+18559234633">(855) 923-4633</a> &mdash; ask about Cascade Care Savings ($250/month subsidy).
 </div>
 <div class="tl-item">
-<strong>Confirm her immigration category.</strong> Check her I-94, visa stamp, or green card. If she came as a refugee or asylee, she may qualify for full-scope Medi-Cal.
+<strong>Apply for Emergency Medicaid</strong> through your county office (CA) or HCA (WA) as a safety net for emergencies.
 </div>
 <div class="tl-item">
-<strong>Find a Federally Qualified Health Center (FQHC)</strong> near you. These community health centers offer care on a sliding-scale fee basis regardless of insurance or immigration status.
+<strong>Confirm the immigration category.</strong> Check the I-94, visa stamp, or green card. If entry was as a refugee or asylee, full-scope Medicaid may be available immediately.
 </div>
 <div class="tl-item">
-<strong>Understand the sponsor&rsquo;s I-864 obligations.</strong> Review the <a href="#sponsor">Affidavit of Support</a> section. Covered California is not affected by sponsor deeming, but means-tested benefits (Medi-Cal, SNAP) are. Consider consulting a free legal aid organization specializing in immigrant benefits.
+<strong>Explore whether any income (~$15,650/year) is possible.</strong> Even modest part-time work restores federal ACA subsidies, dropping marketplace premiums to <strong>under $50/month</strong>.
+</div>
+<div class="tl-item">
+<strong>Understand the sponsor&rsquo;s I-864 obligations.</strong> Review the <a href="#sponsor">Affidavit of Support</a> section. ACA marketplace plans are not affected by sponsor deeming, but means-tested benefits (Medicaid, SNAP) are. Consider consulting a free legal aid organization.
 </div>
 </div>
 
@@ -686,10 +798,10 @@ Call <strong>(800) 300-1506</strong> or apply online. This is the most important
 <span class="tl-phase-label mid">Within 5 Years</span>
 
 <div class="tl-item">
-<strong>Track her 5-year residency date carefully.</strong> Mark the date she became a permanent resident&mdash;that&rsquo;s when the clock starts.
+<strong>Track the 5-year residency date carefully.</strong> Mark the date of permanent residency&mdash;that&rsquo;s when the clock starts for Medicare and full Medicaid eligibility.
 </div>
 <div class="tl-item">
-<strong>Monitor Medi-Cal policy changes.</strong> The enrollment freeze could be reversed or modified by future California legislation.
+<strong>Monitor Medicaid policy changes in both states.</strong> CA&rsquo;s enrollment freeze could be reversed by future legislation. WA&rsquo;s Apple Health Expansion could reopen or expand eligibility.
 </div>
 <div class="tl-item">
 <strong>If possible, accumulate Social Security credits.</strong> 40 quarters (about 10 years of work) = premium-free Medicare Part A. Even part-time work counts.
@@ -707,7 +819,7 @@ Call <strong>(800) 300-1506</strong> or apply online. This is the most important
 <strong>Apply for the QMB program</strong> to cover all Medicare costs if her income stays below 100% of the federal poverty level.
 </div>
 <div class="tl-item">
-<strong>Apply for full-scope Medi-Cal.</strong> The 5-year bar will be satisfied. Note: <a href="#sponsor">sponsor deeming</a> may still apply&mdash;the sponsor&rsquo;s income could affect eligibility unless an exemption (indigence, naturalization, or 40 work quarters) is met.
+<strong>Apply for full-scope Medicaid.</strong> The 5-year bar will be satisfied in both states. Note: <a href="#sponsor">sponsor deeming</a> may still apply&mdash;the sponsor&rsquo;s income could affect eligibility unless an exemption (indigence, naturalization, or 40 work quarters) is met.
 </div>
 </div>
 
@@ -757,6 +869,23 @@ Call <strong>(800) 300-1506</strong> or apply online. This is the most important
 <div class="cc-phone" style="font-size:.95rem">Find your local office</div>
 <a class="cc-link" href="http://www.dhcs.ca.gov/services/medi-cal/Pages/CountyOffices.aspx" target="_blank" rel="noopener">DHCS County Offices &rarr;</a>
 </div>
+<div class="contact-card fade-up">
+<div class="cc-name">WA Healthplanfinder</div>
+<div class="cc-phone"><a href="tel:+18559234633">(855) 923-4633</a></div>
+<div class="cc-hours">Mon&ndash;Fri, 7:30 am&ndash;5:30 pm PT</div>
+<a class="cc-link" href="https://www.wahealthplanfinder.org" target="_blank" rel="noopener">WAHealthplanfinder.org &rarr;</a>
+</div>
+<div class="contact-card fade-up">
+<div class="cc-name">CLEAR Hotline (WA)</div>
+<div class="cc-phone"><a href="tel:+18882011014">(888) 201-1014</a></div>
+<div class="cc-hours">Free immigration benefits counseling</div>
+</div>
+<div class="contact-card fade-up">
+<div class="cc-name">WA Health Care Authority</div>
+<div class="cc-phone"><a href="tel:+18005623022">(800) 562-3022</a></div>
+<div class="cc-hours">Apple Health (Medicaid) questions</div>
+<a class="cc-link" href="https://www.hca.wa.gov" target="_blank" rel="noopener">HCA.wa.gov &rarr;</a>
+</div>
 </div>
 </div>
 </section>
@@ -786,6 +915,11 @@ Call <strong>(800) 300-1506</strong> or apply online. This is the most important
 <li><strong>CMS / Medicaid.gov</strong> &mdash; Sponsor Deeming and Repayment for Certain Immigrants (SHO #19-004)<br><a href="https://www.medicaid.gov/federal-policy-guidance/downloads/sho19004.pdf" target="_blank" rel="noopener">medicaid.gov/federal-policy-guidance/downloads/sho19004.pdf</a></li>
 <li><strong>NILC</strong> &mdash; Sponsored Immigrants and Benefits in California<br><a href="https://www.nilc.org/resources/sponsored-immigrants-and-benefits/" target="_blank" rel="noopener">nilc.org/resources/sponsored-immigrants-and-benefits</a></li>
 <li><strong>KFF</strong> &mdash; Recent Trump Administration Policies Impacting Immigrant Health Coverage<br><a href="https://www.kff.org/immigrant-health/recent-trump-administration-policies-that-impact-health-coverage-and-care-for-immigrant-families/" target="_blank" rel="noopener">kff.org/immigrant-health/recent-trump-administration-policies...</a></li>
+<li><strong>Georgetown CHIR</strong> &mdash; How the &ldquo;One Big Beautiful Bill Act&rdquo; Affects Immigrant Health Coverage<br><a href="https://chirblog.org/how-the-one-big-beautiful-bill-act-affects-immigrant-coverage/" target="_blank" rel="noopener">chirblog.org/how-the-one-big-beautiful-bill-act-affects-immigrant-coverage</a></li>
+<li><strong>healthinsurance.org</strong> &mdash; ACA Subsidy Changes for Immigrants Under OBBBA<br><a href="https://www.healthinsurance.org/obamacare/federal-poverty-level-and-subsidy-eligibility/" target="_blank" rel="noopener">healthinsurance.org/obamacare/federal-poverty-level-and-subsidy-eligibility</a></li>
+<li><strong>WA Health Benefit Exchange</strong> &mdash; Immigrant Health Expansion<br><a href="https://www.wahbexchange.org/about-the-exchange/initiatives/immigrant-health-expansion/" target="_blank" rel="noopener">wahbexchange.org/about-the-exchange/initiatives/immigrant-health-expansion</a></li>
+<li><strong>WA Health Care Authority</strong> &mdash; Apple Health (Medicaid) Coverage<br><a href="https://www.hca.wa.gov/free-or-low-cost-health-care/i-need-medical-dental-or-vision-care/apple-health-medicaid-coverage" target="_blank" rel="noopener">hca.wa.gov/free-or-low-cost-health-care/.../apple-health-medicaid-coverage</a></li>
+<li><strong>WA Healthplanfinder</strong> &mdash; Cascade Care Savings Program<br><a href="https://www.wahealthplanfinder.org/us/en/cascade-care-savings.html" target="_blank" rel="noopener">wahealthplanfinder.org/cascade-care-savings</a></li>
 </ol>
 </div>
 </div>
@@ -797,7 +931,7 @@ Call <strong>(800) 300-1506</strong> or apply online. This is the most important
 <footer>
 <div class="container">
 <p><strong>Disclaimer:</strong> This guide is for informational purposes only and does not constitute legal or medical advice. Health care policies change frequently&mdash;always verify current eligibility with official sources or a free certified enrollment counselor before making decisions.</p>
-<p style="margin-top:12px;opacity:.7">Last updated: February 15, 2026</p>
+<p style="margin-top:12px;opacity:.7">Last updated: February 16, 2026</p>
 </div>
 </footer>
 
