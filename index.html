@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Health Insurance Guide for New Permanent Residents in California</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--teal-deep:#1a6b5a;
+--teal:#2a9d8f;
+--teal-light:#5ec4b6;
+--teal-pale:#e0f5f1;
+--amber:#e9a820;
+--amber-warm:#f4c152;
+--amber-light:#fef3d6;
+--coral:#e07a5f;
+--coral-light:#f9dad0;
+--red:#c44536;
+--red-light:#fde8e5;
+--green:#4a9e6f;
+--green-light:#e3f5eb;
+--cream:#faf6ef;
+--cream-dark:#f0e9dc;
+--text:#2c2416;
+--text-mid:#5a4e3c;
+--text-light:#8a7e6c;
+--white:#ffffff;
+--shadow-sm:0 1px 3px rgba(44,36,22,.08);
+--shadow-md:0 4px 12px rgba(44,36,22,.1);
+--shadow-lg:0 8px 30px rgba(44,36,22,.12);
+--radius:12px;
+--radius-lg:20px;
+--font-display:'Fraunces', Georgia, serif;
+--font-body:'Source Sans 3', 'Segoe UI', sans-serif;
+}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{
+font-family:var(--font-body);
+color:var(--text);
+background:var(--cream);
+line-height:1.7;
+font-size:17px;
+-webkit-font-smoothing:antialiased;
+}
+
+/* ---- Decorative kantha-stitch border pattern ---- */
+.kantha{
+height:6px;
+background:repeating-linear-gradient(90deg,var(--teal) 0 8px,transparent 8px 12px,var(--amber) 12px 20px,transparent 20px 24px,var(--coral) 24px 32px,transparent 32px 36px);
+}
+
+/* ---- Sticky nav ---- */
+nav.toc{
+position:sticky;top:0;z-index:100;
+background:rgba(250,246,239,.92);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+border-bottom:1px solid var(--cream-dark);
+padding:0 20px;
+transition:box-shadow .3s;
+}
+nav.toc.scrolled{box-shadow:var(--shadow-md)}
+nav.toc .inner{
+max-width:1100px;margin:0 auto;
+display:flex;align-items:center;gap:8px;
+overflow-x:auto;scrollbar-width:none;
+padding:10px 0;
+}
+nav.toc .inner::-webkit-scrollbar{display:none}
+nav.toc a{
+font-size:13.5px;font-weight:600;letter-spacing:.01em;
+color:var(--text-mid);text-decoration:none;
+padding:6px 14px;border-radius:99px;
+white-space:nowrap;transition:all .2s;
+flex-shrink:0;
+}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--teal-deep);background:var(--teal-pale)}
+nav.toc a.active{color:var(--white);background:var(--teal-deep)}
+nav.toc .nav-title{
+font-family:var(--font-display);font-weight:700;font-size:15px;
+color:var(--teal-deep);margin-right:8px;flex-shrink:0;
+}
+
+/* ---- Layout ---- */
+.container{max-width:900px;margin:0 auto;padding:0 24px}
+section{padding:60px 0 20px}
+
+/* ---- Header / Hero ---- */
+.hero{
+position:relative;overflow:hidden;
+background:linear-gradient(160deg,var(--teal-deep) 0%,#1f7f6e 40%,var(--teal) 100%);
+color:var(--white);
+padding:72px 24px 60px;
+text-align:center;
+}
+.hero::before{
+content:'';position:absolute;inset:0;
+background:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5c2 8 8 14 16 16-8 2-14 8-16 16-2-8-8-14-16-16 8-2 14-8 16-16z' fill='%23ffffff' fill-opacity='.04'/%3E%3C/svg%3E");
+}
+.hero-inner{position:relative;max-width:700px;margin:0 auto}
+.hero h1{
+font-family:var(--font-display);
+font-size:clamp(2.2rem,5vw,3.4rem);
+font-weight:800;line-height:1.15;
+margin-bottom:12px;
+font-style:italic;
+}
+.hero h1 span{
+display:block;font-style:normal;font-weight:400;
+font-size:clamp(1rem,2.2vw,1.25rem);
+opacity:.85;margin-top:8px;
+letter-spacing:.02em;
+}
+.hero .date{
+display:inline-block;margin-top:16px;
+background:rgba(255,255,255,.15);
+border:1px solid rgba(255,255,255,.2);
+padding:6px 20px;border-radius:99px;
+font-size:14px;font-weight:600;letter-spacing:.03em;
+}
+.hero .motif{
+position:absolute;right:-40px;bottom:-40px;
+width:200px;height:200px;
+border:3px solid rgba(255,255,255,.08);
+border-radius:50%;
+}
+.hero .motif::after{
+content:'';position:absolute;
+right:30px;bottom:30px;
+width:140px;height:140px;
+border:2px solid rgba(255,255,255,.06);
+border-radius:50%;
+}
+
+/* ---- Section headings ---- */
+.section-label{
+display:inline-flex;align-items:center;gap:8px;
+font-size:12px;font-weight:700;text-transform:uppercase;
+letter-spacing:.1em;color:var(--teal);
+margin-bottom:10px;
+}
+.section-label::before{
+content:'';width:24px;height:2px;background:var(--teal);border-radius:2px;
+}
+h2{
+font-family:var(--font-display);
+font-size:clamp(1.6rem,3.5vw,2.1rem);
+font-weight:700;line-height:1.25;
+color:var(--teal-deep);
+margin-bottom:20px;
+}
+h3{
+font-family:var(--font-display);
+font-size:1.15rem;font-weight:700;
+color:var(--text);margin-bottom:8px;
+}
+
+/* ---- At-a-glance cards ---- */
+.glance-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:16px;margin-top:24px;
+}
+.glance-card{
+border-radius:var(--radius);
+padding:24px 20px;
+border-left:5px solid;
+background:var(--white);
+box-shadow:var(--shadow-sm);
+transition:transform .2s,box-shadow .2s;
+}
+.glance-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.glance-card.best{border-color:var(--green);background:var(--green-light)}
+.glance-card.caution{border-color:var(--amber);background:var(--amber-light)}
+.glance-card.blocked{border-color:var(--red);background:var(--red-light)}
+.glance-card .badge{
+display:inline-block;font-size:11px;font-weight:800;
+text-transform:uppercase;letter-spacing:.08em;
+padding:3px 10px;border-radius:99px;margin-bottom:10px;
+}
+.glance-card.best .badge{background:var(--green);color:#fff}
+.glance-card.caution .badge{background:var(--amber);color:#fff}
+.glance-card.blocked .badge{background:var(--red);color:#fff}
+.glance-card .card-title{
+font-family:var(--font-display);font-weight:700;
+font-size:1.1rem;margin-bottom:6px;
+}
+.glance-card p{font-size:14.5px;color:var(--text-mid);line-height:1.55}
+
+/* ---- Content cards ---- */
+.content-card{
+background:var(--white);
+border-radius:var(--radius-lg);
+padding:36px 32px;
+box-shadow:var(--shadow-sm);
+margin-bottom:24px;
+border:1px solid rgba(44,36,22,.04);
+}
+.content-card p,.content-card li{margin-bottom:10px}
+.content-card ul,.content-card ol{padding-left:20px}
+.content-card li::marker{color:var(--teal)}
+
+.highlight-box{
+background:var(--amber-light);
+border:1px solid rgba(233,168,32,.2);
+border-radius:var(--radius);
+padding:20px 24px;
+margin:20px 0;
+font-size:15.5px;
+}
+.highlight-box.alert{
+background:var(--coral-light);
+border-color:rgba(224,122,95,.25);
+}
+.highlight-box strong{color:var(--teal-deep)}
+
+.info-row{
+display:grid;grid-template-columns:140px 1fr;
+gap:4px 16px;padding:10px 0;
+border-bottom:1px solid var(--cream-dark);
+font-size:15.5px;
+}
+.info-row:last-child{border-bottom:none}
+.info-row dt{font-weight:700;color:var(--teal-deep);font-size:14px}
+.info-row dd{color:var(--text-mid)}
+
+a{color:var(--teal-deep);text-decoration-color:var(--teal-light);text-underline-offset:3px}
+a:hover{color:var(--teal);text-decoration-color:var(--teal)}
+
+/* ---- CTA button ---- */
+.cta{
+display:inline-flex;align-items:center;gap:8px;
+background:var(--teal-deep);color:#fff;
+font-weight:700;font-size:15px;
+padding:14px 28px;border-radius:99px;
+text-decoration:none;
+transition:all .2s;
+box-shadow:0 2px 8px rgba(26,107,90,.3);
+}
+.cta:hover{background:var(--teal);color:#fff;transform:translateY(-1px);box-shadow:0 4px 16px rgba(26,107,90,.3)}
+.cta svg{width:18px;height:18px;fill:currentColor}
+
+/* ---- Timeline ---- */
+.timeline{position:relative;padding-left:36px;margin-top:24px}
+.timeline::before{
+content:'';position:absolute;left:13px;top:8px;bottom:8px;
+width:3px;background:linear-gradient(to bottom,var(--teal),var(--amber),var(--coral));
+border-radius:3px;
+}
+.tl-phase{margin-bottom:32px}
+.tl-phase-label{
+display:inline-block;
+font-family:var(--font-display);font-weight:800;
+font-size:13px;text-transform:uppercase;letter-spacing:.08em;
+padding:4px 14px;border-radius:99px;
+margin-bottom:14px;
+position:relative;
+}
+.tl-phase-label.now{background:var(--teal);color:#fff}
+.tl-phase-label.mid{background:var(--amber);color:#fff}
+.tl-phase-label.later{background:var(--coral);color:#fff}
+
+.tl-item{
+position:relative;
+padding:12px 0 12px 16px;
+font-size:15.5px;
+}
+.tl-item::before{
+content:'';position:absolute;
+left:-30px;top:18px;
+width:13px;height:13px;
+border-radius:50%;
+background:var(--white);
+border:3px solid var(--teal);
+z-index:1;
+}
+.tl-phase.phase-mid .tl-item::before{border-color:var(--amber)}
+.tl-phase.phase-later .tl-item::before{border-color:var(--coral)}
+.tl-item strong{color:var(--teal-deep)}
+
+/* ---- Contact cards ---- */
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+gap:16px;margin-top:24px;
+}
+.contact-card{
+background:var(--white);
+border-radius:var(--radius);
+padding:24px;
+box-shadow:var(--shadow-sm);
+border:1px solid var(--cream-dark);
+transition:box-shadow .2s;
+}
+.contact-card:hover{box-shadow:var(--shadow-md)}
+.contact-card .cc-name{
+font-family:var(--font-display);font-weight:700;
+font-size:1rem;color:var(--teal-deep);margin-bottom:6px;
+}
+.contact-card .cc-phone{
+font-size:1.15rem;font-weight:700;
+color:var(--text);margin-bottom:4px;
+}
+.contact-card .cc-phone a{color:inherit;text-decoration:none}
+.contact-card .cc-hours{font-size:13.5px;color:var(--text-light)}
+.contact-card .cc-link{
+display:inline-block;margin-top:8px;font-size:14px;font-weight:600;
+}
+
+/* ---- References ---- */
+.ref-list{counter-reset:refs}
+.ref-list li{
+counter-increment:refs;
+list-style:none;position:relative;
+padding:10px 0 10px 40px;
+border-bottom:1px solid var(--cream-dark);
+font-size:14.5px;
+}
+.ref-list li:last-child{border-bottom:none}
+.ref-list li::before{
+content:counter(refs);
+position:absolute;left:0;top:10px;
+width:28px;height:28px;
+background:var(--teal-pale);
+color:var(--teal-deep);
+font-size:12px;font-weight:700;
+display:flex;align-items:center;justify-content:center;
+border-radius:50%;
+}
+.ref-list a{word-break:break-word}
+
+/* ---- Footer ---- */
+footer{
+background:var(--teal-deep);color:rgba(255,255,255,.75);
+padding:40px 24px;margin-top:40px;
+font-size:14px;line-height:1.7;text-align:center;
+}
+footer strong{color:#fff}
+
+/* ---- Responsive ---- */
+@media(max-width:700px){
+.container{padding:0 16px}
+section{padding:40px 0 12px}
+.content-card{padding:24px 18px;border-radius:var(--radius)}
+.hero{padding:52px 16px 44px}
+.info-row{grid-template-columns:1fr;gap:2px 0}
+nav.toc .nav-title{display:none}
+.glance-grid{grid-template-columns:1fr}
+.contact-grid{grid-template-columns:1fr}
+}
+
+/* ---- Print ---- */
+@media print{
+nav.toc,.hero .motif{display:none}
+.hero{background:#1a6b5a!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-size:12pt;background:#fff}
+.content-card{box-shadow:none;border:1px solid #ddd;break-inside:avoid}
+.glance-card{break-inside:avoid;box-shadow:none;border:1px solid #ccc}
+section{padding:30px 0 10px}
+a{color:var(--teal-deep)}
+a::after{content:" (" attr(href) ")";font-size:9pt;color:#666}
+footer{background:#333!important}
+}
+
+/* ---- Animate on scroll ---- */
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- Decorative top border -->
+<div class="kantha" aria-hidden="true"></div>
+
+<!-- Hero -->
+<header class="hero" id="top">
+<div class="hero-inner">
+<h1>Health Insurance Guide<span>For new permanent residents in California (age 65+, no income)</span>
+</h1>
+<div class="date">Updated February 15, 2026</div>
+</div>
+<div class="motif" aria-hidden="true"></div>
+</header>
+
+<div class="kantha" aria-hidden="true"></div>
+
+<!-- Sticky navigation -->
+<nav class="toc" aria-label="Table of contents">
+<div class="inner">
+<span class="nav-title">Guide</span>
+<a href="#glance">At a Glance</a>
+<a href="#covered-ca">Covered California</a>
+<a href="#medicare">Medicare</a>
+<a href="#medi-cal">Medi-Cal</a>
+<a href="#emergency">Emergency</a>
+<a href="#plan">Action Plan</a>
+<a href="#contacts">Contacts</a>
+<a href="#references">References</a>
+</div>
+</nav>
+
+<main>
+
+<!-- ============ AT A GLANCE ============ -->
+<section id="glance">
+<div class="container">
+<div class="section-label">Overview</div>
+<h2>At a Glance</h2>
+<p>Here's a quick look at which programs are available right now and which require waiting.</p>
+
+<div class="glance-grid">
+<div class="glance-card best fade-up">
+<span class="badge">Best option</span>
+<div class="card-title">Covered California</div>
+<p>Eligible <strong>immediately</strong> as a permanent resident. Subsidies available even with zero income. Apply now.</p>
+</div>
+<div class="glance-card caution fade-up">
+<span class="badge">Available</span>
+<div class="card-title">Emergency Medi-Cal</div>
+<p>Covers emergency room visits and emergency surgeries. Available as a safety net regardless of status.</p>
+</div>
+<div class="glance-card blocked fade-up">
+<span class="badge">Not eligible yet</span>
+<div class="card-title">Medicare</div>
+<p>Requires 5 years of continuous US residency. Earliest eligibility around <strong>2031</strong>.</p>
+</div>
+<div class="glance-card blocked fade-up">
+<span class="badge">Enrollment frozen</span>
+<div class="card-title">Full Medi-Cal</div>
+<p>As of Jan 2026, new green card holders under 5 years cannot enroll in full-scope Medi-Cal.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ COVERED CALIFORNIA ============ -->
+<section id="covered-ca">
+<div class="container">
+<div class="section-label">Recommended</div>
+<h2>Covered California (ACA Marketplace)</h2>
+<p style="font-size:1.05rem;color:var(--text-mid);margin-bottom:24px">This is the best and most immediate path to comprehensive health insurance.</p>
+
+<div class="content-card fade-up">
+<h3>Why She Qualifies</h3>
+<ul>
+<li>As a <strong>lawful permanent resident</strong> (green card holder), she is eligible with <strong>no waiting period</strong>.</li>
+<li><strong>Special rule for immigrants:</strong> During the first 5 years, lawfully present immigrants with income below the federal poverty level can still receive premium subsidies. Normally, people this low-income are directed to Medicaid instead&mdash;but immigrants in the 5-year bar get an exception.</li>
+<li>With <strong>zero income</strong>, she qualifies for significant <strong>premium tax credits</strong> and <strong>cost-sharing reductions</strong> on Silver plans, making coverage very affordable or even free.</li>
+</ul>
+</div>
+
+<div class="content-card fade-up">
+<h3>What's Covered</h3>
+<ul>
+<li>Doctor visits &amp; specialist care</li>
+<li>Prescription drugs</li>
+<li>Hospital stays &amp; surgeries</li>
+<li>Preventive care (screenings, vaccines, annual checkups)</li>
+<li>Mental health &amp; behavioral health services</li>
+<li>Lab work &amp; imaging</li>
+<li>Dental coverage (on some plans)</li>
+</ul>
+</div>
+
+<div class="content-card fade-up">
+<h3>How to Enroll</h3>
+<div class="info-row"><dt>By Phone</dt><dd><strong>(800) 300-1506</strong> &mdash; Mon&ndash;Fri, 8 am&ndash;6 pm. Help available in many languages including Bengali.</dd></div>
+<div class="info-row"><dt>Online</dt><dd><a href="https://www.coveredca.com/apply/" target="_blank" rel="noopener">CoveredCA.com/apply</a></dd></div>
+<div class="info-row"><dt>In Person</dt><dd><a href="https://www.coveredca.com/support/find-an-enroller/" target="_blank" rel="noopener">Find a certified enroller near you</a> &mdash; free and confidential help.</dd></div>
+<div class="info-row"><dt>Immigrant Info</dt><dd><a href="https://www.coveredca.com/learning-center/information-for-immigrants/" target="_blank" rel="noopener">Covered CA&rsquo;s immigrant resource page</a></dd></div>
+
+<div style="margin-top:24px;text-align:center">
+<a class="cta" href="https://www.coveredca.com/apply/" target="_blank" rel="noopener">
+Apply at Covered California
+<svg viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg>
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ MEDICARE ============ -->
+<section id="medicare">
+<div class="container">
+<div class="section-label">Future Option</div>
+<h2>Medicare &mdash; Not Yet Eligible</h2>
+<p style="color:var(--text-mid);margin-bottom:24px">Medicare is the long-term goal, but there are barriers for new permanent residents.</p>
+
+<div class="content-card fade-up">
+<h3>Why She Can't Enroll Yet</h3>
+<ul>
+<li>Medicare requires <strong>5 years of continuous US residency</strong> before a permanent resident can enroll.</li>
+<li>Without <strong>40 quarters (~10 years)</strong> of US work history, Part A (hospital insurance) is <strong>not free</strong>.</li>
+<li>After 5 years, she can <em>buy</em> Part A at approximately <strong>$518/month</strong> (2025 rate) plus Part B (doctors) at <strong>$185/month</strong>.</li>
+</ul>
+
+<div class="highlight-box">
+<strong>Spouse exception:</strong> If her spouse worked 10+ years in the US and paid Medicare taxes, she may qualify for premium-free Part A through her spouse&rsquo;s work record. Worth checking!
+</div>
+</div>
+
+<div class="content-card fade-up">
+<h3>Programs That Can Help Pay (After 5 Years)</h3>
+<p>Once she becomes Medicare-eligible, several programs can cover the costs for people with low income:</p>
+
+<div class="info-row"><dt>QMB</dt><dd><strong>Qualified Medicare Beneficiary</strong> &mdash; Pays all Medicare premiums, deductibles, and copays. Income must be at or below 100% FPL (~$15,060/year). Asset limit: $9,660.</dd></div>
+<div class="info-row"><dt>SLMB</dt><dd><strong>Specified Low-Income Medicare Beneficiary</strong> &mdash; Covers Part B premium. Income up to 135% FPL.</dd></div>
+<div class="info-row"><dt>QI</dt><dd><strong>Qualifying Individual</strong> &mdash; Covers Part B premium. Income up to 150% FPL.</dd></div>
+<div class="info-row"><dt>Extra Help</dt><dd><strong>Part D Low-Income Subsidy</strong> &mdash; Reduces prescription drug costs (premiums, deductibles, copays).</dd></div>
+
+<div class="highlight-box" style="margin-top:20px">
+<strong>With zero income, she would very likely qualify for QMB</strong>, which would cover essentially all Medicare costs. This makes Medicare affordable once the 5-year residency requirement is met.
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ MEDI-CAL ============ -->
+<section id="medi-cal">
+<div class="container">
+<div class="section-label">Important Changes</div>
+<h2>Medi-Cal &mdash; Recent Changes</h2>
+<p style="color:var(--text-mid);margin-bottom:24px">California recently changed the rules, and this directly affects new permanent residents.</p>
+
+<div class="content-card fade-up">
+<h3>What Changed on January 1, 2026</h3>
+<ul>
+<li><strong>Previously</strong>, California had <em>no</em> 5-year waiting period for permanent residents&mdash;full-scope Medi-Cal was available immediately.</li>
+<li><strong>As of January 1, 2026</strong>, California enacted an <strong>enrollment freeze</strong> for new applicants with &ldquo;unsatisfactory immigration status.&rdquo;</li>
+<li>Green card holders with <strong>less than 5 years</strong> of residency are now classified under this category.</li>
+<li>New applicants in this category can <strong>only receive Emergency Medi-Cal</strong>.</li>
+</ul>
+
+<div class="highlight-box alert">
+<strong>This is a significant change.</strong> If she had applied before January 1, 2026, she could have received full-scope coverage. Those already enrolled keep their benefits. Only new applicants are affected by the freeze.
+</div>
+</div>
+
+<div class="content-card fade-up">
+<h3>Income &amp; Asset Limits (If She Qualifies Later)</h3>
+<div class="info-row"><dt>Income Limit</dt><dd><strong>$1,801/month</strong> for an individual (she qualifies with no income)</dd></div>
+<div class="info-row"><dt>Asset Limit</dt><dd><strong>$130,000</strong> for an individual (reinstated Jan 2026)</dd></div>
+</div>
+
+<div class="content-card fade-up">
+<h3>Important Exception to Check</h3>
+<div class="highlight-box">
+<strong>If the applicant came to the US as a refugee or asylee</strong> (rather than through a regular family-sponsored green card), they may be <strong>exempt</strong> from the 5-year bar and could still qualify for full-scope Medi-Cal. Check the exact immigration category on the I-94 or green card documentation.
+</div>
+<p>Other exempt categories include: Cuban/Haitian entrants, victims of trafficking, certain Amerasian immigrants, and veterans or active-duty military.</p>
+</div>
+</div>
+</section>
+
+<!-- ============ EMERGENCY MEDI-CAL ============ -->
+<section id="emergency">
+<div class="container">
+<div class="section-label">Safety Net</div>
+<h2>Emergency Medi-Cal</h2>
+<p style="color:var(--text-mid);margin-bottom:24px">Available right now as a safety net, regardless of immigration status or waiting periods.</p>
+
+<div class="content-card fade-up">
+<h3>What It Covers</h3>
+<ul>
+<li>Emergency room visits</li>
+<li>Emergency surgeries</li>
+<li>Emergency medical conditions (heart attacks, strokes, severe injuries, etc.)</li>
+<li>Labor and delivery</li>
+</ul>
+<p>This does <em>not</em> cover routine doctor visits, prescriptions, or preventive care&mdash;which is why Covered California is the primary recommendation.</p>
+
+<h3 style="margin-top:24px">How to Apply</h3>
+<div class="info-row"><dt>Online</dt><dd><a href="http://www.benefitscal.com" target="_blank" rel="noopener">BenefitsCal.com</a> &mdash; California&rsquo;s benefits application portal</dd></div>
+<div class="info-row"><dt>In Person</dt><dd>Visit your <a href="http://www.dhcs.ca.gov/services/medi-cal/Pages/CountyOffices.aspx" target="_blank" rel="noopener">local county Medi-Cal office</a></dd></div>
+<div class="info-row"><dt>By Phone</dt><dd>Call Covered California at <strong>(800) 300-1506</strong> for guidance</dd></div>
+</div>
+</div>
+</section>
+
+<!-- ============ ACTION PLAN ============ -->
+<section id="plan">
+<div class="container">
+<div class="section-label">What To Do</div>
+<h2>Action Plan &amp; Timeline</h2>
+<p style="color:var(--text-mid);margin-bottom:8px">A step-by-step plan covering what to do now, what to prepare for, and long-term milestones.</p>
+
+<div class="content-card fade-up" style="padding-bottom:12px">
+<div class="timeline">
+
+<!-- NOW -->
+<div class="tl-phase">
+<span class="tl-phase-label now">Now &mdash; February 2026</span>
+
+<div class="tl-item">
+<strong>Apply to Covered California immediately.</strong><br>
+Call <strong>(800) 300-1506</strong> or apply online. This is the most important step.
+</div>
+<div class="tl-item">
+<strong>Apply for Emergency Medi-Cal</strong> through your county office as a safety net for emergencies.
+</div>
+<div class="tl-item">
+<strong>Confirm her immigration category.</strong> Check her I-94, visa stamp, or green card. If she came as a refugee or asylee, she may qualify for full-scope Medi-Cal.
+</div>
+<div class="tl-item">
+<strong>Find a Federally Qualified Health Center (FQHC)</strong> near you. These community health centers offer care on a sliding-scale fee basis regardless of insurance or immigration status.
+</div>
+</div>
+
+<!-- WITHIN 5 YEARS -->
+<div class="tl-phase phase-mid">
+<span class="tl-phase-label mid">Within 5 Years</span>
+
+<div class="tl-item">
+<strong>Track her 5-year residency date carefully.</strong> Mark the date she became a permanent resident&mdash;that&rsquo;s when the clock starts.
+</div>
+<div class="tl-item">
+<strong>Monitor Medi-Cal policy changes.</strong> The enrollment freeze could be reversed or modified by future California legislation.
+</div>
+<div class="tl-item">
+<strong>If possible, accumulate Social Security credits.</strong> 40 quarters (about 10 years of work) = premium-free Medicare Part A. Even part-time work counts.
+</div>
+</div>
+
+<!-- AFTER 5 YEARS -->
+<div class="tl-phase phase-later">
+<span class="tl-phase-label later">After 5 Years (~2031)</span>
+
+<div class="tl-item">
+<strong>Enroll in Medicare.</strong> She&rsquo;ll need to pay premiums without sufficient work history, but assistance programs can help.
+</div>
+<div class="tl-item">
+<strong>Apply for the QMB program</strong> to cover all Medicare costs if her income stays below 100% of the federal poverty level.
+</div>
+<div class="tl-item">
+<strong>Apply for full-scope Medi-Cal.</strong> The 5-year bar will be satisfied, and she&rsquo;ll qualify for comprehensive coverage.
+</div>
+</div>
+
+</div><!-- /timeline -->
+</div>
+</div>
+</section>
+
+<!-- ============ CONTACTS ============ -->
+<section id="contacts">
+<div class="container">
+<div class="section-label">Help</div>
+<h2>Important Contacts</h2>
+<p style="color:var(--text-mid);margin-bottom:8px">Keep these numbers handy. All services are free.</p>
+
+<div class="contact-grid">
+<div class="contact-card fade-up">
+<div class="cc-name">Covered California</div>
+<div class="cc-phone"><a href="tel:+18003001506">(800) 300-1506</a></div>
+<div class="cc-hours">Mon&ndash;Fri, 8 am&ndash;6 pm</div>
+<a class="cc-link" href="https://www.coveredca.com" target="_blank" rel="noopener">CoveredCA.com &rarr;</a>
+</div>
+<div class="contact-card fade-up">
+<div class="cc-name">Medicare</div>
+<div class="cc-phone"><a href="tel:+18006334227">1-800-MEDICARE</a></div>
+<div class="cc-hours">24 hours a day, 7 days a week</div>
+<a class="cc-link" href="https://www.medicare.gov" target="_blank" rel="noopener">Medicare.gov &rarr;</a>
+</div>
+<div class="contact-card fade-up">
+<div class="cc-name">Social Security</div>
+<div class="cc-phone"><a href="tel:+18007721213">1-800-772-1213</a></div>
+<div class="cc-hours">Mon&ndash;Fri, 8 am&ndash;7 pm</div>
+<a class="cc-link" href="https://www.ssa.gov" target="_blank" rel="noopener">SSA.gov &rarr;</a>
+</div>
+<div class="contact-card fade-up">
+<div class="cc-name">HICAP</div>
+<div class="cc-phone"><a href="tel:+18004340222">(800) 434-0222</a></div>
+<div class="cc-hours">Free Medicare counseling for seniors</div>
+</div>
+<div class="contact-card fade-up">
+<div class="cc-name">BenefitsCal</div>
+<div class="cc-phone" style="font-size:.95rem">Online Benefits Portal</div>
+<a class="cc-link" href="http://www.benefitscal.com" target="_blank" rel="noopener">BenefitsCal.com &rarr;</a>
+</div>
+<div class="contact-card fade-up">
+<div class="cc-name">County Medi-Cal Offices</div>
+<div class="cc-phone" style="font-size:.95rem">Find your local office</div>
+<a class="cc-link" href="http://www.dhcs.ca.gov/services/medi-cal/Pages/CountyOffices.aspx" target="_blank" rel="noopener">DHCS County Offices &rarr;</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ REFERENCES ============ -->
+<section id="references">
+<div class="container">
+<div class="section-label">Sources</div>
+<h2>All References</h2>
+<p style="color:var(--text-mid);margin-bottom:24px">Information in this guide was gathered from the following official and trusted sources.</p>
+
+<div class="content-card fade-up">
+<ol class="ref-list">
+<li><strong>Covered California</strong> &mdash; Information for Immigrants<br><a href="https://www.coveredca.com/learning-center/information-for-immigrants/" target="_blank" rel="noopener">coveredca.com/learning-center/information-for-immigrants</a></li>
+<li><strong>Justice in Aging</strong> &mdash; Older Immigrants and Medicare<br><a href="https://justiceinaging.org/older-immigrants-and-medicare/" target="_blank" rel="noopener">justiceinaging.org/older-immigrants-and-medicare</a></li>
+<li><strong>MedicareResources.org</strong> &mdash; Coverage for Recent Immigrants Over 65<br><a href="https://www.medicareresources.org/faqs/can-recent-immigrants-to-the-united-states-get-health-coverage-if-theyre-over-65/" target="_blank" rel="noopener">medicareresources.org/faqs/can-recent-immigrants...</a></li>
+<li><strong>Disability Rights California</strong> &mdash; Medicaid Policy Changes in California<br><a href="https://www.disabilityrightsca.org/publications/medicaid-policy-changes-in-california-who-what-when-and-why" target="_blank" rel="noopener">disabilityrightsca.org/publications/medicaid-policy-changes...</a></li>
+<li><strong>Mendocino Coast Clinics</strong> &mdash; Changes to Medi-Cal and Covered California for 2026<br><a href="https://mendocinocoastclinics.org/patient-resources/changes-to-medi-cal-and-covered-california-for-2026/" target="_blank" rel="noopener">mendocinocoastclinics.org/patient-resources/changes-to-medi-cal...</a></li>
+<li><strong>KFF</strong> &mdash; Can Immigrants Enroll in Medicare?<br><a href="https://www.kff.org/faqs/medicare-open-enrollment-faqs/enrollment-information-for-people-new-to-medicare/can-immigrants-enroll-in-medicare/" target="_blank" rel="noopener">kff.org/faqs/medicare-open-enrollment-faqs...</a></li>
+<li><strong>Medicaid Planning Assistance</strong> &mdash; California Medi-Cal Eligibility<br><a href="https://www.medicaidplanningassistance.org/medicaid-eligibility-california/" target="_blank" rel="noopener">medicaidplanningassistance.org/medicaid-eligibility-california</a></li>
+<li><strong>HealthCare.gov</strong> &mdash; Health Coverage for Lawfully Present Immigrants<br><a href="https://www.healthcare.gov/immigrants/lawfully-present-immigrants/" target="_blank" rel="noopener">healthcare.gov/immigrants/lawfully-present-immigrants</a></li>
+<li><strong>DHCS</strong> &mdash; Medi-Cal Eligibility<br><a href="https://www.dhcs.ca.gov/services/medi-cal/eligibility" target="_blank" rel="noopener">dhcs.ca.gov/services/medi-cal/eligibility</a></li>
+<li><strong>Medicare.gov</strong> &mdash; Official Medicare Website<br><a href="https://www.medicare.gov" target="_blank" rel="noopener">medicare.gov</a></li>
+<li><strong>Social Security Administration</strong> &mdash; Plan for Medicare<br><a href="https://www.ssa.gov/medicare" target="_blank" rel="noopener">ssa.gov/medicare</a></li>
+<li><strong>The Commonwealth Fund</strong> &mdash; What Recent Policy Changes Mean for Immigrant Health Coverage<br><a href="https://www.commonwealthfund.org/publications/explainer/2025/oct/what-recent-policy-changes-mean-immigrant-health-coverage" target="_blank" rel="noopener">commonwealthfund.org/publications/explainer/2025/oct/...</a></li>
+</ol>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+<p><strong>Disclaimer:</strong> This guide is for informational purposes only and does not constitute legal or medical advice. Health care policies change frequently&mdash;always verify current eligibility with official sources or a free certified enrollment counselor before making decisions.</p>
+<p style="margin-top:12px;opacity:.7">Last updated: February 15, 2026</p>
+</div>
+</footer>
+
+<script>
+// Sticky nav shadow on scroll
+const nav=document.querySelector('nav.toc');
+window.addEventListener('scroll',()=>{
+nav.classList.toggle('scrolled',window.scrollY>10);
+},{passive:true});
+
+// Active nav link on scroll
+const sections=document.querySelectorAll('section[id]');
+const navLinks=document.querySelectorAll('nav.toc a');
+const obs=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting){
+navLinks.forEach(l=>l.classList.remove('active'));
+const active=document.querySelector(`nav.toc a[href="#${e.target.id}"]`);
+if(active)active.classList.add('active');
+}
+});
+},{rootMargin:'-20% 0px -75% 0px'});
+sections.forEach(s=>obs.observe(s));
+
+// Fade-up on scroll
+const fadeEls=document.querySelectorAll('.fade-up');
+const fadeObs=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting){e.target.classList.add('visible');fadeObs.unobserve(e.target)}
+});
+},{threshold:0.15});
+fadeEls.forEach(el=>fadeObs.observe(el));
+</script>
+</body>
+</html>
